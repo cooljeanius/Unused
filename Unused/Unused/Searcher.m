@@ -74,7 +74,9 @@
 }
 
 - (void)stop {
-#warning implement me!
+#if defined(__GNUC__) && !defined(__STRICT_ANSI__)
+# warning implement me!
+#endif /* __GNUC__ && !__STRICT_ANSI__ */
 }
 
 - (void)runImageSearch:(NSString *)searchPath {
